@@ -1,18 +1,19 @@
-var myApp = angular.module('myApp', ["ngRoute"]);
+angular.module('myApp', ['ngSlider']);
+var myApp = angular.module('myApp',["ngRoute"]);
 
 
 myApp.config(["$routeProvider", function($routeProvider){
     $routeProvider.
         when("/userHome", {
-            templateUrl: "/views/loggedInViews/userHome.html",
+            templateUrl: "/views/partials/userHome.html",
             controller: "UserHomeController"
         }).
         when("/doExercise", {
-            templateUrl: "/views/loggedInViews/doExercise.html",
-            // controller: "UnfinishedController"
+            templateUrl: "/views/partials/doExercise.html",
+            controller: "userController"
         }).
         when("/createExType", {
-            templateUrl: "/views/loggedInViews/createExType.html",
+            templateUrl: "/views/partials/createExType.html",
             // controller: "CreateController"
         }).
         otherwise({

@@ -1,7 +1,10 @@
-myApp.controller('UserController', ['$scope', '$http', '$window','FactoryService' ]function($scope, $http, $window, FactoryService) {
+myApp.controller('UserController', ['$scope', '$http', '$window','FactoryService', 'ngSlider' ]function($scope, $http, $window, FactoryService, $ngSlider) {
     $scope.userName;
     $scope.id;
     $scope.first_name;
+    $scope.slider = {
+    value: 10
+  };
 
     // This happens after page load, which means it has authenticated if it was ever going to
     // NOT SECURE
