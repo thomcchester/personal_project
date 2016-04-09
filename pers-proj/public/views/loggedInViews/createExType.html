@@ -1,0 +1,57 @@
+<p>
+<form action="/createExType" method="post">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+    </div>
+
+    <div>
+        <label for="description">Describe the dare in detail:</label>
+        <textarea type="description" name="description" id="description"></textarea>
+    </div>
+    <div>
+      <select for="bodyRegion" type="bodyRegion" name="bodyRegion" id="bodyRegion">
+          <option value="neck">Neck</option>
+          <option value="upperTrap">Upper Trap</option>
+          <option value="lowerTrap">Lower Trap</option>
+          <option value="delt">Delt</option>
+          <option value="lat">Lats</option>
+          <option value="pects">Pects</option>
+          <option value="upperBack">Upper Back</option>
+          <option value="bicep">Bicep</option>
+          <option value="tricep">Tricep</option>
+          <option value="forearm">Forearm</option>
+          <option value="grip">Grip</option>
+          <option value="upperAbs">Upper Abs</option>
+          <option value="lowerAbs">Lower Abs</option>
+          <option value="obliques">Obliques</option>
+          <option value="lowerBack">Lower Back</option>
+          <option value="glutes">Glutes</option>
+          <option value="adductor">Adductor</option>
+          <option value="abductor">abductor</option>
+          <option value="quads">Quads</option>
+          <option value="hamstring">Hamstring</option>
+          <option value="calves">Calves</option>
+      </select>
+    </div>
+    <div>
+      <select or="deviceType" type="deviceType" name="deviceType" id="deviceType">
+              <option value="barbell">Barbell</option>
+              <option value="dumbbell">Dumbbell</option>
+              <option value="bodyWeight">Body Weight</option>
+              <option value="machine">Machine</option>
+              <option value="cable">Cable</option>
+              <option value="yogaBall">Yoga Ball</option>
+              <option value="pilatesMachine">Pilates Machine</option>
+        </select>
+    </div>
+    <div>
+      <input type="checkbox" name="time" value="true" id="time" /> Time
+      <input type="checkbox" name="reps" value="true" id="reps" /> Reps
+      <input type="checkbox" name="weight" value="true" id="weight" /> Weight
+
+    </div>
+    <input type="submit" value="make exercise"/>
+</form>
+
+</p>

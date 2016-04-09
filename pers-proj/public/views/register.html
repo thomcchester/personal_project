@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Express / Passport</title>
+
+    <link rel="stylesheet" href="/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/app.js"></script>
+</head>
+<body ng-app="myApp">
+    <div class="instructions">
+        <div class="container">
+            <h1 class="lead">Register New User</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Set action and method -->
+        <form action="/register" method="post" onsubmit="if(document.getElementById('agreetos').checked) { return true; } else { alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); return false; }">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+
+            <div>
+                <label for="password">Password:</label>
+                <input type="text" name="password" id="password" required>
+            </div>
+            <div>
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name" id="first_name" required>
+            </div>
+            <div>
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name" id="last_name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+              <label for="sex">Select your sex:</label>
+              <select ng-model="sex" type="sex" name="sex" id="sex" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="yes_please">Yes, please</option>
+              </select>
+            </div>
+            <!-- Testing checkbox -->
+            <div>
+              <input type="checkbox" name="agreetos" value="true" id="agreetos" /> I have read and agree to the Terms and Conditions and Privacy Policy
+            </div>
+
+            <input type="submit" value="Register"/>
+        </form>
+    </div>
+</body>
+</html>

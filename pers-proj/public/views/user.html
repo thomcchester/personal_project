@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>welcome!</title>
+
+    <link rel="stylesheet" href="/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/app.js"></script>
+</head>
+<body ng-app="myApp">
+    <div class="instructions" ng-controller="UserController">
+        <div class="container">
+            <h1 id="welcome" class="lead">Welcome, {{first_name}}! You are user {{id}}</h1>
+        </div>
+        <ul>
+          <li><a href = "#user">Home</a></li>
+          <li><a href = "#doExercise">Do Exercise</a></li>
+          <li><a href = "#createExType">Create Exercise Type</a></li>
+        </ul>
+    </div>
+    <main ng-view>
+
+    </main>
+</body>
+</html>
