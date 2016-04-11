@@ -11,7 +11,6 @@ var pg = require('pg');
 // });
 
 router.post('/', function(req, res, next) {
-
   var doExercise = {
     exercise: req.body.exercise,
     weight: req.body.wieght,

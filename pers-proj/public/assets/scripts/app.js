@@ -38,21 +38,22 @@ myApp.controller('UserController', ['$scope','UserService', '$http', '$window', 
             $scope.userName=response.data.username;
             $scope.id=response.data.id;
             $scope.first_name=response.data.first_name;
-            console.log('User Data: ', $scope.userName);
         } else {
             $window.location.href = '/index.html';
         }
     });
-    $scope.user=UserService;
 }]);
 myApp.controller('DoExController', ['$scope','UserService', '$http', '$window', function($scope,UserService, $http, $window) {
-  console.log(UserService);
+  $scope.user=UserService.user;
+  console.log($scope.user);
+
+
 }]);
 
 myApp.controller('CreateController', ['$scope','UserService', '$http', '$window', function($scope,UserService, $http, $window) {
   $scope.user;
   $scope.user=UserService;
-  console.log($scope.user);
+
 }]);
 
 myApp.factory("UserService", ["$http", function($http){

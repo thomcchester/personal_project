@@ -1,11 +1,15 @@
 <p>
-  {{user.user.username}}
+  {{user.user.userName}}
   <p>
   </p>
 <form action="/createExType" method="post">
     <div>
         <label for="name">Name:</label>
         <input type="text" name="name" id="name">
+    </div>
+    <div>
+      <label for="user">{{user.user.userName}}</label>
+      <input type="text" name="user" id="user" value='{{user.user.userName}}'>
     </div>
 
     <div>
