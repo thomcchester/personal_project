@@ -10,8 +10,11 @@ html {
 }
 $body-bg: transparent;
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
 
+@function textColorMainBase{
+  return #088D93;
+}
+
+.body{
+  color: textColorMainBase;
 }
