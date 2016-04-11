@@ -11,7 +11,7 @@ var pg = require('pg');
 // });
 
 router.post('/', function(req, res, next) {
-
+ // console.log("userservice", UserService)
   var createExType = {
     name: req.body.name,
     description: req.body.description,
@@ -20,6 +20,7 @@ router.post('/', function(req, res, next) {
     time:req.body.time,
     weight:req.body.weight,
     reps:req.body.reps
+    // user:UserService.user.userName
   };
 
   pg.connect(connection, function(err, client, done) {

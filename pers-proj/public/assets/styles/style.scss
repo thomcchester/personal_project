@@ -9,12 +9,3 @@ html {
     background-size: cover;
 }
 $body-bg: transparent;
-
-
-@function textColorMainBase{
-  return #088D93;
-}
-
-.body{
-  color: textColorMainBase;
-}
