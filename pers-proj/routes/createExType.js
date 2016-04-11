@@ -11,7 +11,7 @@ var pg = require('pg');
 // });
 
 router.post('/', function(req, res, next) {
- // console.log("userservice", UserService)
+ console.log("userservice", UserService);
   var createExType = {
     name: req.body.name,
     description: req.body.description,
