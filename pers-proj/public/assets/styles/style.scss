@@ -1,0 +1,17 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+html {
+    background: url(/extras/training.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+$body-bg: transparent;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+
+}

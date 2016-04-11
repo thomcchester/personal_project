@@ -1,4 +1,4 @@
-myApp.controller('UserController', ['$scope', '$http', '$window','FactoryService', 'ngSlider' ]function($scope, $http, $window, FactoryService, $ngSlider) {
+myApp.controller('UserController', ['$scope', '$http', '$window','FactoryService', 'rzModule' ]function($scope, $http, $window, FactoryService, $rzModule) {
     $scope.userName;
     $scope.id;
     $scope.first_name;
