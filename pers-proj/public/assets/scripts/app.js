@@ -44,8 +44,8 @@ myApp.controller('UserController', ['$scope','UserService', '$http', '$window', 
     });
 }]);
 myApp.controller('DoExController', ['$scope','UserService', '$http', '$window', function($scope,UserService, $http, $window) {
-  $scope.user=UserService.user;
-  console.log($scope.user);
+  $scope.user;
+  $scope.user=UserService;
 
 
 }]);
