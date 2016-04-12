@@ -47,7 +47,9 @@ myApp.controller('DoExController', ['$scope','UserService', '$http', '$window', 
   $scope.user;
   $scope.user=UserService;
   $scope.thing;
-  $scope.namer=UserService.getExType();
+  UserService.getExType();
+  $scope.thing=UserService.exty;
+
 
 
 }]);
@@ -55,6 +57,7 @@ myApp.controller('DoExController', ['$scope','UserService', '$http', '$window', 
 myApp.controller('CreateController', ['$scope','UserService', '$http', '$window', function($scope,UserService, $http, $window) {
   $scope.user;
   $scope.user=UserService;
+
 
 
 
@@ -68,21 +71,8 @@ myApp.factory("UserService", ["$http", function($http){
     var getExType = function(){
     $http.get('/createExType').then(function(response){
         console.log('getExtype in factory',response.data);
-        exty.object = response.data;
-        console.log(exty.object[1].name);
-        var len=0;
-        for (var o in exty.object) {
-        len++;
-        }
-        var namer=[];
-        var tag;
-        for (i=0; i<11; i++){
-          tag=exty.object[i].name
-          namer.push(tag);
-        }
-        return{
-          namer : namer
-        }
+        exty.asset = response.data;
+        console.log(exty);
     });
     };
     return {

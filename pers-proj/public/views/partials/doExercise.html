@@ -1,24 +1,22 @@
 <p>
 <form action="/doExercise" method="post">
-    <p>
-      {{}}
-    </p>
+    <div>
+      <select name="exercise" id="exercise">
+        <option ng-repeat="item in thing.asset" value="{{item.name}}">
+          {{item.name}}
+        </option>
+      </select>
+    </div>
     <div>
       <label for="user">{{user.user.userName}}</label>
       <input type="text" name="user" id="user" value='{{user.user.userName}}'>
     </div>
     <div>
-        <!-- I will have change this to take inputs from the exercise page TODO -->
-        <label for="exercise">exercise</label>
-        <input type="text" name="exercise" id="exercise">
-    </div>
-
-    <div>
         <label for="weight">Wieght</label>
-        <textarea type="weight" name="weight" id="weight"></textarea>
+        <input type="text" name="weight" id="weight">
     </div>
     <div>
-      <select for="bodyRegion" type="bodyRegion" name="bodyRegion" id="bodyRegion">
+      <select for="reps" type="reps" name="reps" id="reps">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
