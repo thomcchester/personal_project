@@ -9,13 +9,9 @@
     <script type="text/javascript" src="/assets/scripts/app.js"></script>
 </head>
 <body ng-app="myApp">
-    <div class="instructions">
-        <div class="container">
-            <h1 class="lead">Register New User</h1>
-        </div>
-    </div>
 
-    <div class="container">
+
+    <div class="container" id="regNew">
         <!-- Set action and method -->
         <form action="/register" method="post" onsubmit="if(document.getElementById('agreetos').checked) { return true; } else { alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); return false; }">
             <div>
@@ -40,11 +36,12 @@
                 <input type="email" name="email" id="email" required>
             </div>
             <div>
-              <label for="sex">Select your sex:</label>
+              <label for="sex">Select your gender</label>
               <select ng-model="sex" type="sex" name="sex" id="sex" required>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
-                <option value="yes_please">Yes, please</option>
+                <option value="other">other</option>
+                <option value="preferdecline">Prefer to Decline</option>
               </select>
             </div>
             <!-- Testing checkbox -->

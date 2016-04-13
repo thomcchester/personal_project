@@ -38,4 +38,24 @@ html {
 .sideItems li {
   margin-top: 20px; }
 
+.doEx {
+  opacity: .5;
+  width: 50%;
+  background-color: grey;
+  margin: 0 auto; }
+
+#loginInfo {
+  width: 25%;
+  margin: 0 auto;
+  background-color: grey;
+  opacity: .5;
+  margin-top: 12.5%; }
+
+#regNew {
+  width: 25%;
+  margin: 0 auto;
+  background-color: grey;
+  opacity: .5;
+  margin-top: 12.5%; }
+
 /*# sourceMappingURL=style.css.map */

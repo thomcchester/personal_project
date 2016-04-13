@@ -15,6 +15,11 @@ myApp.config(["$routeProvider", function($routeProvider){
             templateUrl: "/views/partials/createExType.html",
             controller: "CreateController"
         }).
+        when("/compareEx", {
+            templateUrl: "/views/partials/compareEx.html",
+            // controller: "CreateController"
+        }).
+
         otherwise({
             redirectTo: "/userHome"
         });
@@ -59,11 +64,8 @@ myApp.controller('DoExController', ['$scope','UserService', '$http', '$window', 
 myApp.controller('CreateController', ['$scope','UserService', '$http', '$window', function($scope,UserService, $http, $window) {
   $scope.user;
   $scope.user=UserService;
-
-
-
-
 }]);
+
 
 myApp.factory("UserService", ["$http", function($http){
     var user = {};
