@@ -9,11 +9,33 @@ html {
   width: 10%;
   background-color: grey;
   opacity: .5;
-  height: 1000px; }
-  .instructions:hover {
-    -webkit-transition: 0.35s ease;
-    -moz-transition: 0.35s ease;
-    transition: 0.35s ease;
-    width: 25%; }
+  height: 1000px;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .instructions .sideItems {
+    position: absolute;
+    left: -200px; }
+
+.boxCreateEx {
+  background-color: grey;
+  opacity: .5;
+  width: 50%;
+  margin: 0 auto; }
+
+.instructions:hover {
+  -webkit-transition: 0.35s ease;
+  -moz-transition: 0.35s ease;
+  transition: 0.35s ease;
+  width: 25%; }
+
+.instructions:hover .sideItems {
+  -webkit-transition: 0.35s ease;
+  -moz-transition: 0.35s ease;
+  transition: 0.35s ease;
+  left: 0; }
+
+.sideItems li {
+  margin-top: 20px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -27,8 +27,32 @@ $body-bg: transparent;
   background-color: grey;
   opacity:.5;
   height:1000px;
-  &:hover{
+  position:absolute;
+  top:0;
+  left:0;
+  .sideItems{
+    position:absolute;
+    left:-200px;
+  }
+}
+.boxCreateEx{
+  background-color: grey;
+  opacity:.5;
+  width:50%;
+  margin:0 auto;
+}
+
+.instructions:hover {
     @include transition(.35s ease);
     width:25%
+}
+.instructions:hover .sideItems{
+    @include transition(.35s ease);
+    left:0;
+}
+
+.sideItems{
+  li{
+  margin-top: 20px;
   }
 }
