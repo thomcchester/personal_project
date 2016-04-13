@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp',["ngRoute"]);
+var myApp = angular.module('myApp',['ngRoute','rzModule']);
 
 
 myApp.config(["$routeProvider", function($routeProvider){
@@ -49,6 +49,7 @@ myApp.controller('DoExController', ['$scope','UserService', '$http', '$window', 
   $scope.thing;
   UserService.getExType();
   $scope.thing=UserService.exty;
+  $scope.priceSlider=10;
 
 
 
