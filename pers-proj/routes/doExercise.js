@@ -23,7 +23,7 @@ router.post('/', function(req, res, next) {
   };
 
   pg.connect(connection, function(err, client, done) {
-
+    console.log(doExercise.pain)
     client.query("INSERT INTO ex (exercise, weight, reps, time, rest_time, quality, pain, user_as) VALUES ($1, $2, $3,$4,$5, $6, $7, $8) RETURNING id",
       [doExercise.exercise, doExercise.weight, doExercise.reps, doExercise.time, doExercise.restTime, doExercise.quality, doExercise.pain, doExercise.user],
         function (err, result) {

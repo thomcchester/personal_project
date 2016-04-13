@@ -14,6 +14,7 @@ var createExType = require('./routes/createExType');
 var doExercise = require('./routes/doExercise');
 
 
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 

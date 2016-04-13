@@ -3,6 +3,14 @@ $primary-color: #333;
 
 @import "bourbon/bourbon";
 
+// @mixin transition($duration) {
+//     -webkit-transition: $duration;
+//     -moz-transition: $duration;
+//     -ms-transition: $duration;
+//     -o-transition: $duration;
+//     transition: $duration;
+// }
+
 html {
     background: url(/extras/training.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -14,6 +22,13 @@ html {
 
 $body-bg: transparent;
 
-body{
-
+.instructions{
+  width:10%;
+  background-color: grey;
+  opacity:.5;
+  height:1000px;
+  &:hover{
+    @include transition(.35s ease);
+    width:25%
+  }
 }

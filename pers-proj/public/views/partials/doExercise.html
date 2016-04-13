@@ -70,11 +70,11 @@
         <input type="text" name="restTime" id="restTime">
     </div>
     <div>
-        <!-- I will have change this to a slider TODO -->
-        <label for="quality">Quality</label>
-        <input type="text" name="quality" id="quality">
+        <input name="quality" id="quality" type="number" ng-model="priceSl" />
+        <rzslider rz-slider-model="priceSl"></rzslider>
     </div>
     <div>
+        <input name="pain" id="pain" type="number" ng-model="priceSlider" />
         <rzslider rz-slider-model="priceSlider"></rzslider>
     </div>
     <input type="submit" value="make exercise"/>

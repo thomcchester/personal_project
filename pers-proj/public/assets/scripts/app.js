@@ -50,6 +50,7 @@ myApp.controller('DoExController', ['$scope','UserService', '$http', '$window', 
   UserService.getExType();
   $scope.thing=UserService.exty;
   $scope.priceSlider=10;
+  $scope.priceSl=10;
 
 
 

@@ -5,4 +5,15 @@ html {
   -o-background-size: cover;
   background-size: cover; }
 
+.instructions {
+  width: 10%;
+  background-color: grey;
+  opacity: .5;
+  height: 1000px; }
+  .instructions:hover {
+    -webkit-transition: 0.35s ease;
+    -moz-transition: 0.35s ease;
+    transition: 0.35s ease;
+    width: 25%; }
+
 /*# sourceMappingURL=style.css.map */
