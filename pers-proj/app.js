@@ -12,7 +12,7 @@ var user = require('./routes/user');
 var register = require('./routes/register');
 var createExType = require('./routes/createExType');
 var doExercise = require('./routes/doExercise');
-var compareEx= require('/routes/compareEx');
+
 
 
 
@@ -38,7 +38,7 @@ app.use('/register', register);
 app.use('/user', user);
 app.use('/createExType', createExType);
 app.use('/doExercise', doExercise);
-app.use('/compareEx', compareEx);
+
 
 app.use('/', index);
 
