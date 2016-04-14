@@ -17,7 +17,7 @@ myApp.config(["$routeProvider", function($routeProvider){
         }).
         when("/compareEx", {
             templateUrl: "/views/partials/compareEx.html",
-            // controller: "CreateController"
+            controller: "CompareController"
         }).
 
         otherwise({
@@ -52,11 +52,12 @@ myApp.controller('DoExController', ['$scope','UserService', '$http', '$window', 
   $scope.user;
   $scope.user=UserService;
   $scope.thing;
+  $scope.date;
   UserService.getExType();
   $scope.thing=UserService.exty;
   $scope.priceSlider=10;
   $scope.priceSl=10;
-
+  $scope.thing.date=UserService.d;
 
 
 }]);
@@ -66,23 +67,57 @@ myApp.controller('CreateController', ['$scope','UserService', '$http', '$window'
   $scope.user=UserService;
 }]);
 
+myApp.controller('CompareController', ['$scope','UserService','GetterService','$http', '$window', function($scope,UserService,GetterService, $http, $window) {
+  $scope.user;
+  $scope.user=UserService;
+  $scope.thing;
+  GetterService.getExs();
+  $scope.thing=UserService.allex;
+
+
+
+}]);
+
 
 myApp.factory("UserService", ["$http", function($http){
     var user = {};
     var exty={};
     var ext={};
+    var allex={};
+    var d={};
 
     var getExType = function(){
     $http.get('/createExType').then(function(response){
-        console.log('getExtype in factory',response.data);
+        console.log('getExt in factory',response.data);
         exty.asset = response.data;
-        console.log(exty);
+        exty.date=Date()
+        console.log(exty)
     });
     };
+
     return {
         user : user,
         exty : exty,
         ext : ext,
+        allex : allex,
         getExType : getExType
+    };
+}]);
+
+myApp.factory("GetterService", ["$http", function($http){
+
+    var allex={};
+
+    var getExs = function(){
+    $http.get('/getExs').then(function(response){
+        console.log('getExt in factory',response.data);
+        allex.asset = response.data;
+        console.log(allex);
+    });
+    };
+
+    return {
+        allex : allex,
+        getExs : getExs
     };
 }]);

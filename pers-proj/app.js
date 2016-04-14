@@ -12,6 +12,7 @@ var user = require('./routes/user');
 var register = require('./routes/register');
 var createExType = require('./routes/createExType');
 var doExercise = require('./routes/doExercise');
+var getExs = require('./routes/getExs');
 
 
 
@@ -38,6 +39,7 @@ app.use('/register', register);
 app.use('/user', user);
 app.use('/createExType', createExType);
 app.use('/doExercise', doExercise);
+app.use('/getExs', getExs);
 
 
 app.use('/', index);

@@ -1,6 +1,10 @@
 
 <div class="doEx">
 <form action="/doExercise" method="post">
+  <div>
+    <label for="date">{{thing.date}}</label>
+    <input type="text" name="date" id="date" value='{{thing.date}}'>
+  </div>
     <div>
       <select name="exercise" id="exercise">
         <option ng-repeat="item in thing.asset" value="{{item.name}}">

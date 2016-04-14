@@ -19,13 +19,14 @@ router.post('/', function(req, res, next) {
     time:req.body.time,
     quality:req.body.quality,
     reps:req.body.reps,
-    user:req.body.user
+    user:req.body.user,
+    date:req.body.date
   };
 
   pg.connect(connection, function(err, client, done) {
     console.log(doExercise.pain)
-    client.query("INSERT INTO ex (exercise, weight, reps, time, rest_time, quality, pain, user_as) VALUES ($1, $2, $3,$4,$5, $6, $7, $8) RETURNING id",
-      [doExercise.exercise, doExercise.weight, doExercise.reps, doExercise.time, doExercise.restTime, doExercise.quality, doExercise.pain, doExercise.user],
+    client.query("INSERT INTO ex (exercise, weight, reps, time, rest_time, quality, pain, user_as, date) VALUES ($1, $2, $3,$4,$5, $6, $7, $8,$9) RETURNING id",
+      [doExercise.exercise, doExercise.weight, doExercise.reps, doExercise.time, doExercise.restTime, doExercise.quality, doExercise.pain, doExercise.user, doExercise.date],
         function (err, result) {
 
           client.end();
