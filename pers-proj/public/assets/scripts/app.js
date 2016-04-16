@@ -53,26 +53,44 @@ myApp.controller('DoExController', ['$scope','UserService', '$http', '$window', 
   $scope.user=UserService;
   $scope.thing;
   $scope.date;
+  $scope.doerate={};
   UserService.getExType();
   $scope.thing=UserService.exty;
   $scope.priceSlider=10;
   $scope.priceSl=10;
-  $scope.thing.date=UserService.d;
+  $scope.submitForm = function(){
+    $scope.doerate.pain=$scope.priceSlider;
+    $scope.doerate.quality=$scope.priceSl;
+    $scope.doerate.date=Date();
+    UserService.createFunctionDo($scope.doerate);
+
+    console.log($scope.doerate)
+  }
 
 
 }]);
 
 myApp.controller('CreateController', ['$scope','UserService', '$http', '$window', function($scope,UserService, $http, $window) {
+  $scope.allerate={};
   $scope.user;
   $scope.user=UserService;
+  $scope.submitForm = function(){
+    $scope.allerate.user = $scope.user.user.userName;
+    UserService.createFunction($scope.allerate);
+  }
 }]);
 
 myApp.controller('CompareController', ['$scope','UserService','GetterService','$http', '$window', function($scope,UserService,GetterService, $http, $window) {
   $scope.user;
   $scope.user=UserService;
   $scope.thing;
+  $scope.hold;
   GetterService.getExs();
-  $scope.thing=UserService.allex;
+  $scope.thing=GetterService.allex;
+  $scope.toggle = false;
+  $scope.submitForm = function(){
+    $scope.hold=Object.keys($scope.thing.asset)[0]
+  }
 
 
 
@@ -94,13 +112,27 @@ myApp.factory("UserService", ["$http", function($http){
         console.log(exty)
     });
     };
+    var createFunction = function(data){
+      $http.post('/createExType', data).then(function(request){
+    //posts to SQL database, but idk why it is sending full html page
+    });
+  };
+
+  var createFunctionDo = function(data){
+    $http.post('/doExercise', data).then(function(request){
+  //posts to SQL database, but idk why it is sending full html page
+  });
+};
 
     return {
         user : user,
         exty : exty,
         ext : ext,
         allex : allex,
+        createFunction : createFunction,
+        createFunctionDo : createFunctionDo,
         getExType : getExType
+
     };
 }]);
 
@@ -112,7 +144,11 @@ myApp.factory("GetterService", ["$http", function($http){
     $http.get('/getExs').then(function(response){
         console.log('getExt in factory',response.data);
         allex.asset = response.data;
-        console.log(allex);
+        allex.len=Object.keys(allex.asset).length
+        allex.asset = _.groupBy(allex.asset, "exercise");
+        console.log(Object.keys(allex.asset)[0]);
+
+
     });
     };
 

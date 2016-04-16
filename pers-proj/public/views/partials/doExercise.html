@@ -1,12 +1,12 @@
 
 <div class="doEx">
-<form action="/doExercise" method="post">
+<form name="createDoEx" ng-submit="submitForm()">
   <div>
     <label for="date">{{thing.date}}</label>
-    <input type="text" name="date" id="date" value='{{thing.date}}'>
+    <input type="text" name="date" id="date" value="{{thing.date}}" ng-model="doerate.date">
   </div>
     <div>
-      <select name="exercise" id="exercise">
+      <select name="exercise" id="exercise" ng-model="doerate.exercise">
         <option ng-repeat="item in thing.asset" value="{{item.name}}">
           {{item.name}}
         </option>
@@ -14,14 +14,14 @@
     </div>
     <div>
       <label for="user">{{user.user.userName}}</label>
-      <input type="text" name="user" id="user" value='{{user.user.userName}}'>
+      <input type="text" name="user" id="user" value='{{user.user.userName}}' ng-model="doerate.user">
     </div>
     <div>
         <label for="weight">Wieght</label>
-        <input type="text" name="weight" id="weight">
+        <input type="text" name="weight" id="weight" ng-model="doerate.weight">
     </div>
     <div>
-      <select for="reps" type="reps" name="reps" id="reps">
+      <select for="reps" type="reps" name="reps" id="reps" ng-model="doerate.reps">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -67,15 +67,15 @@
     <div>
         <!-- I will have change this to a time thing TODO -->
         <label for="time">time</label>
-        <input type="text" name="time" id="time">
+        <input type="text" name="time" id="time" ng-model="doerate.time">
     </div>
     <div>
         <!-- I will have change this to a time thing TODO -->
         <label for="restTime">Rest Time</label>
-        <input type="text" name="restTime" id="restTime">
+        <input type="text" name="restTime" id="restTime" ng-model="doerate.restTime">
     </div>
     <div>
-        <input name="quality" id="quality" type="number" ng-model="priceSl" />
+        <input name="quality" id="quality" type="number" ng-model="priceSl"  />
         <rzslider rz-slider-model="priceSl"></rzslider>
     </div>
     <div>

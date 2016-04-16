@@ -1,3 +1,5 @@
-<p>
-  {{date}}
-</p>
+<div ng-repeat="item in thing.asset">
+    <div class="{'seenDo': toggle}">
+      <button ng-click="toggle = !toggle">{{item[0].exercise}}</button>
+    </div>
+</div>

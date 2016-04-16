@@ -58,4 +58,15 @@ html {
   opacity: .5;
   margin-top: 12.5%; }
 
+#line {
+  color: black;
+  opacity: 1; }
+
+.thingk {
+  color: red; }
+
+.seenDo {
+  background-color: red;
+  width: 1000px; }
+
 /*# sourceMappingURL=style.css.map */

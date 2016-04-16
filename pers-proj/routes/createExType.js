@@ -5,7 +5,7 @@ var path = require('path');
 
 var connection = require('../modules/connection');
 var pg = require('pg');
-
+var passport = require('passport');
 // router.get('/', function(req, res, next) {
 //     res.sendFile(path.resolve(__dirname, '../public/views/create.html'));
 // });
@@ -72,5 +72,16 @@ router.get('/',function(request,response){
 
 });
 
+
+router.get('/', function(req, res) {
+    // check if logged in
+    if(req.isAuthenticated()) {
+        // send back user object from database
+        res.send(req.user);
+    } else {
+        // failure best handled on the server. do redirect here.
+        res.send(false);
+    }
+});
 
 module.exports = router;

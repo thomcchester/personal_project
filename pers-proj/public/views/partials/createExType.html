@@ -3,22 +3,22 @@
   {{user.user.userName}}
   <p>
   </p>
-<form action="/createExType" method="post">
+<form name="createexform" ng-submit="submitForm()">
     <div>
         <label for="name">Name:</label>
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" ng-model="allerate.name">
     </div>
     <div>
       <label for="user">{{user.user.userName}}</label>
-      <input type="text" name="user" id="user" value='{{user.user.userName}}'>
+      <input type="text" name="user" id="user" value="{{user.user.userName}}" ng-model="allerate.user" >
     </div>
 
     <div>
-        <label for="description">Describe the dare in detail:</label>
-        <textarea type="description" name="description" id="description"></textarea>
+        <label for="description">Des</label>
+        <textarea type="description" name="description" id="description" ng-model="allerate.description"></textarea>
     </div>
     <div>
-      <select for="bodyRegion" type="bodyRegion" name="bodyRegion" id="bodyRegion">
+      <select for="bodyRegion" type="bodyRegion" name="bodyRegion" id="bodyRegion" ng-model="allerate.bodyRegion">
           <option value="neck">Neck</option>
           <option value="upperTrap">Upper Trap</option>
           <option value="lowerTrap">Lower Trap</option>
@@ -43,7 +43,7 @@
       </select>
     </div>
     <div>
-      <select or="deviceType" type="deviceType" name="deviceType" id="deviceType">
+      <select or="deviceType" type="deviceType" name="deviceType" id="deviceType"ng-model="allerate.deviceType">
               <option value="barbell">Barbell</option>
               <option value="dumbbell">Dumbbell</option>
               <option value="bodyWeight">Body Weight</option>
@@ -54,9 +54,9 @@
         </select>
     </div>
     <div>
-      <input type="checkbox" name="time" value="true" id="time" /> Time
-      <input type="checkbox" name="reps" value="true" id="reps" /> Reps
-      <input type="checkbox" name="weight" value="true" id="weight" /> Weight
+      <input type="checkbox" name="time" value="true" id="time" ng-model="allerate.time"/> Time
+      <input type="checkbox" name="reps" value="true" id="reps" ng-model="allerate.reps"/> Reps
+      <input type="checkbox" name="weight" value="true" id="weight" ng-model="allerate.weight"/> Weight
 
     </div>
     <input type="submit" value="make exercise"/>
