@@ -84,13 +84,10 @@ myApp.controller('CompareController', ['$scope','UserService','GetterService','$
   $scope.user;
   $scope.user=UserService;
   $scope.thing;
-  $scope.hold;
   GetterService.getExs();
   $scope.thing=GetterService.allex;
-  $scope.toggle = false;
-  $scope.submitForm = function(){
-    $scope.hold=Object.keys($scope.thing.asset)[0]
-  }
+  $scope.latex=$scope.thing.asset;
+
 
 
 
@@ -142,11 +139,10 @@ myApp.factory("GetterService", ["$http", function($http){
 
     var getExs = function(){
     $http.get('/getExs').then(function(response){
-        console.log('getExt in factory',response.data);
         allex.asset = response.data;
         allex.len=Object.keys(allex.asset).length
         allex.asset = _.groupBy(allex.asset, "exercise");
-        console.log(Object.keys(allex.asset)[0]);
+        console.log(allex)
 
 
     });

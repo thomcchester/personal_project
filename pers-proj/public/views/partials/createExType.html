@@ -1,24 +1,21 @@
 <div class="boxCreateEx">
-<p>
-  {{user.user.userName}}
-  <p>
-  </p>
 <form name="createexform" ng-submit="submitForm()">
     <div>
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" ng-model="allerate.name">
+        <label class="darkText" for="name">Name of Exercise:</label>
+        <input class="submitBtn darkText" type="text" name="name" id="name" ng-model="allerate.name">
     </div>
     <div>
-      <label for="user">{{user.user.userName}}</label>
-      <input type="text" name="user" id="user" value="{{user.user.userName}}" ng-model="allerate.user" >
+      <label class="userCreate darkText" for="user">{{user.user.userName}}</label>
+      <input class="userCreate" type="text" name="user" id="user" value="{{user.user.userName}}" ng-model="allerate.user" >
     </div>
 
     <div>
-        <label for="description">Des</label>
-        <textarea type="description" name="description" id="description" ng-model="allerate.description"></textarea>
+        <label class="darkText" for="description">Description Of Exercise:</label>
+        <textarea class="submitBtn" type="description" name="description" id="description" ng-model="allerate.description"></textarea>
     </div>
     <div>
-      <select for="bodyRegion" type="bodyRegion" name="bodyRegion" id="bodyRegion" ng-model="allerate.bodyRegion">
+      <label for="bodyRegion">Body Part</label>
+      <select class="submitBtn" for="bodyRegion" type="bodyRegion" name="bodyRegion" id="bodyRegion" ng-model="allerate.bodyRegion">
           <option value="neck">Neck</option>
           <option value="upperTrap">Upper Trap</option>
           <option value="lowerTrap">Lower Trap</option>
@@ -43,7 +40,8 @@
       </select>
     </div>
     <div>
-      <select or="deviceType" type="deviceType" name="deviceType" id="deviceType"ng-model="allerate.deviceType">
+      <label for="deviceType">Equipment Type</label>
+      <select class="submitBtn" or="deviceType" type="deviceType" name="deviceType" id="deviceType"ng-model="allerate.deviceType">
               <option value="barbell">Barbell</option>
               <option value="dumbbell">Dumbbell</option>
               <option value="bodyWeight">Body Weight</option>
@@ -54,12 +52,12 @@
         </select>
     </div>
     <div>
-      <input type="checkbox" name="time" value="true" id="time" ng-model="allerate.time"/> Time
-      <input type="checkbox" name="reps" value="true" id="reps" ng-model="allerate.reps"/> Reps
-      <input type="checkbox" name="weight" value="true" id="weight" ng-model="allerate.weight"/> Weight
+      <input class="submitBtn litbut" type="checkbox" name="time" value="true" id="time" ng-model="allerate.time"/> Time
+      <input class="submitBtn litbut" type="checkbox" name="reps" value="true" id="reps" ng-model="allerate.reps"/> Reps
+      <input class="submitBtn litbut" type="checkbox" name="weight" value="true" id="weight" ng-model="allerate.weight"/> Weight
 
     </div>
-    <input type="submit" value="make exercise"/>
+    <input class="submitBtn subbtn" type="submit" value="make exercise"/>
 </form>
 
 </p>

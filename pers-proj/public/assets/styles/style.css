@@ -5,6 +5,30 @@ html {
   -o-background-size: cover;
   background-size: cover; }
 
+body {
+  font-family: 'Lato', sans-serif; }
+  body .dataFit {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 3em;
+    float: right;
+    color: #03666A;
+    margin: 50px;
+    margin-right: 120px; }
+  body .facts {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 3em;
+    position: absolute;
+    color: #03666A;
+    right: 300px;
+    top: 150px; }
+  body .notTheory {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 3em;
+    position: absolute;
+    color: #03666A;
+    right: 150px;
+    top: 200px; }
+
 .instructions {
   width: 10%;
   background-color: grey;
@@ -19,7 +43,6 @@ html {
 
 .boxCreateEx {
   background-color: grey;
-  opacity: .5;
   width: 50%;
   margin: 0 auto; }
 
@@ -62,11 +85,63 @@ html {
   color: black;
   opacity: 1; }
 
-.thingk {
-  color: red; }
+.userCreate {
+  display: none; }
 
-.seenDo {
-  background-color: red;
-  width: 1000px; }
+.pForExCom {
+  display: none; }
+
+.divForExCom {
+  margin-left: 100px;
+  color: red;
+  float: left; }
+
+.divForExCom:hover .hider {
+  display: block;
+  opacity: 0; }
+
+.divForExCom:hover .pForExCom {
+  display: block;
+  opacity: 1; }
+
+.submitBtn {
+  box-shadow: none !important;
+  border: none !important; }
+
+.boxin {
+  padding-top: 7%; }
+
+.boxCreateEx {
+  opacity: .5;
+  border-radius: 3px;
+  margin-top: 50px;
+  color: #03666A;
+  font-size: 1.5em;
+  background-color: gray;
+  width: 50%; }
+
+.subbtn {
+  margin-left: 30%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #5DC8CD;
+  height: 40px;
+  border-radius: 3px; }
+
+.litbut {
+  width: 30px;
+  /*Desired width*/
+  height: 30px;
+  /*Desired height*/
+  margin: 0; }
+
+.logBtn {
+  box-shadow: none;
+  margin-left: 30%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #5DC8CD;
+  height: 40px;
+  border-radius: 3px; }
 
 /*# sourceMappingURL=style.css.map */

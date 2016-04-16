@@ -1,5 +1,11 @@
 <div ng-repeat="item in thing.asset">
-    <div class="{'seenDo': toggle}">
-      <button ng-click="toggle = !toggle">{{item[0].exercise}}</button>
+    <div class="divForExCom">
+      <span class="hider"> {{item[0].exercise}}</span>
+      <p class="pForExCom">
+        <span class="">Weight</span> <span class="">Reps</span> <span class="">Time</span> <span class="">Rest Time</span> <span class="">Quality</span> <span class="">Pain</span> <span class="">Date</span>
+      </p>
+      <p class="pForExCom" ng-repeat="cat in item">
+        {{cat.weight}} {{cat.reps}} {{cat.time}}  {{cat.rest_time}} {{cat.quality}} {{cat.pain}}   {{cat.date}}
+      </p>
     </div>
 </div>
