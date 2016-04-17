@@ -1,26 +1,29 @@
 
-<div class="doEx">
+<div class="doExBox">
 <form name="createDoEx" ng-submit="submitForm()">
-  <div>
+  <div class="hiderate">
     <label for="date">{{thing.date}}</label>
     <input type="text" name="date" id="date" value="{{thing.date}}" ng-model="doerate.date">
   </div>
     <div>
+        Exercise:
+
       <select name="exercise" id="exercise" ng-model="doerate.exercise">
         <option ng-repeat="item in thing.asset" value="{{item.name}}">
           {{item.name}}
         </option>
       </select>
     </div>
-    <div>
+    <div class="hiderate">
       <label for="user">{{user.user.userName}}</label>
       <input type="text" name="user" id="user" value='{{user.user.userName}}' ng-model="doerate.user">
     </div>
     <div>
-        <label for="weight">Wieght</label>
+        <label for="weight">Wieght:</label>
         <input type="text" name="weight" id="weight" ng-model="doerate.weight">
     </div>
     <div>
+      <label for="reps">Reps:</label>
       <select for="reps" type="reps" name="reps" id="reps" ng-model="doerate.reps">
           <option value="1">1</option>
           <option value="2">2</option>
@@ -97,7 +100,7 @@
     </div>
     <div>
         <!-- I will have change this to a time thing TODO -->
-        <label for="time">time</label>
+        <label for="time">Time</label>
         <input type="text" name="time" id="time" ng-model="doerate.time">
     </div>
     <div>
@@ -106,13 +109,20 @@
         <input type="text" name="restTime" id="restTime" ng-model="doerate.restTime">
     </div>
     <div>
-        <input name="quality" id="quality" type="number" ng-model="priceSl"  />
+        <p class="titleSlide">
+          Quality:
+        </p>
+        <input class="slide-label" name="quality" id="quality" type="number" ng-model="priceSl"  />
         <rzslider rz-slider-model="priceSl"></rzslider>
     </div>
     <div>
-        <input name="pain" id="pain" type="number" ng-model="priceSlider" />
+        <p class="titleSlide">
+          Pain:
+        </p>
+        <input class="slide-label" name="pain" id="pain" type="number" ng-model="priceSlider" />
         <rzslider rz-slider-model="priceSlider"></rzslider>
     </div>
-    <input type="submit" value="make exercise"/>
+      <input class="submitBtn subbtn subdo" type="submit" value="Make Exercise"/>
+
 </form>
 </div>

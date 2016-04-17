@@ -55,20 +55,29 @@ body{
 $body-bg: transparent;
 
 .instructions{
+  color:#5DC8CD;
+  a{
+    color:#5DC8CD;
+    font-size: 1.75em;
+  }
   width:10%;
-  background-color: grey;
-  opacity:.5;
+  background-color: rgba(105, 105, 105,.74);
   height:1000px;
   position:absolute;
   top:0;
   left:0;
+  ul{
+    list-style: none;
+  }
   .sideItems{
     position:absolute;
-    left:-200px;
+    left:-300px;
+    margin-top: 45px;
+
   }
 }
 .boxCreateEx{
-  background-color: grey;
+  background-color: rgba(105, 105, 105, 0.74);
   width:50%;
   margin:0 auto;
 }
@@ -125,21 +134,7 @@ $body-bg: transparent;
   display:none;
 }
 
-.divForExCom{
-  margin-left:100px;
-  color:red;
-  float:left;
 
-}
-
-.divForExCom:hover .hider{
-  display:block;
-  opacity: 0;
-}
-.divForExCom:hover .pForExCom{
-  display:block;
-  opacity: 1;
-}
 
 .submitBtn{
   box-shadow: none !important;
@@ -185,4 +180,152 @@ $body-bg: transparent;
   background-color:#5DC8CD;
   height:40px;
   border-radius: 3px;
+}
+.registers{
+  font-family: 'Lato', sans-serif;
+}
+
+.loginBox{
+  border-radius: 10px;
+}
+
+.fails{
+  font-size: 2em;
+  opacity: 1;
+  position:absolute;
+  left:180%;
+  top:10px;
+  color:#5DC8CD
+}
+.failto{
+  font-size: 2em;
+  opacity: 1;
+  position:absolute;
+  left:340%;
+  top:30px;
+  color:#5DC8CD
+}
+.faillogin{
+  font-size: 2em;
+  opacity: 1;
+  position:absolute;
+  left:410%;
+  top:50px;
+  color:#5DC8CD
+}
+.doGym{
+  font-size: 2em;
+  opacity: 1;
+  position:absolute;
+  left:500%;
+  top:125px;
+  color:#5DC8CD;
+  width:500px
+}
+
+.backin{
+  position:absolute;
+  font-size:1.25em;
+  top:5%;
+  right:5%;
+  color:#5DC8CD;
+}
+
+// THiS SECTION IS FOR THE COMPARE PAGE
+.divForExCom{
+  margin-left:150px;
+  color:#5DC8CD;
+  display:inline-block;
+
+}
+
+
+.hider{
+  display:inline-block;
+  margin-right:0px;
+  margin-left:0px;
+  width:100px;
+}
+
+.divForExCom:hover{
+  background-color:rgba(222, 245, 246, .5);
+
+}
+.divForExCom:hover .pForExCom{
+  display:block;
+  opacity: 1;
+}
+.pForExCom{
+  color: rgba(18, 62, 64, 1);
+}
+.topCom{
+  background-color:rgba(54, 189, 196, 0.6);
+  width:100px;
+  padding:10px;
+  border-radius:2px;
+  margin:10px;
+}
+
+
+.bottomCom{
+  float:left;
+  text-align: center;
+  width:40px;
+  padding:10px;
+  border-radius:2px;
+  margin:10px;
+}
+
+.catReps{
+  margin-left:20px;
+}
+
+.catRest{
+  margin-left:20px;
+}
+
+.catDate{
+  margin-left:0;
+  width:350px;
+}
+
+.catQuality{
+  margin-left:40px;
+}
+
+//Doing exercise stuff
+.doExBox{
+  background-color:rgba(105, 105, 105,.74);
+  width:50%;
+  margin:0 auto;
+  border-radius:3px;
+}
+
+.hiderate{
+  display:none;
+}
+
+.slide-label{
+  width:100%;
+  background:none;
+  border:none !important;
+  box-shadow: none !important;
+  text-align: center;
+
+}
+
+.titleSlide{
+  width:100%;
+  text-align: center;
+  margin-top:0;
+  margin-bottom:0;
+}
+
+.buttoner{
+  width:100%;
+}
+
+.subdo{
+  margin-left:42%;
+  margin-right:45%;
 }
