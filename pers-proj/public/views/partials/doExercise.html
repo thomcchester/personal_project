@@ -5,10 +5,10 @@
     <label for="date">{{thing.date}}</label>
     <input type="text" name="date" id="date" value="{{thing.date}}" ng-model="doerate.date">
   </div>
-    <div>
-        Exercise:
+    <div class="spacing">
+        <span class="exl">Exercise:</span>
 
-      <select name="exercise" id="exercise" ng-model="doerate.exercise">
+      <select class="dropdown whiteBlock" name="exercise" id="exercise" ng-model="doerate.exercise">
         <option ng-repeat="item in thing.asset" value="{{item.name}}">
           {{item.name}}
         </option>
@@ -18,13 +18,13 @@
       <label for="user">{{user.user.userName}}</label>
       <input type="text" name="user" id="user" value='{{user.user.userName}}' ng-model="doerate.user">
     </div>
-    <div>
-        <label for="weight">Wieght:</label>
-        <input type="text" name="weight" id="weight" ng-model="doerate.weight">
+    <div class="spacing">
+        <label for="weight">Weight:</label>
+        <input class="dropdown whiteBlock" type="text" name="weight" id="weight" ng-model="doerate.weight">
     </div>
-    <div>
+    <div class="spacing">
       <label for="reps">Reps:</label>
-      <select for="reps" type="reps" name="reps" id="reps" ng-model="doerate.reps">
+      <select class="dropdown whiteBlock" for="reps" type="reps" name="reps" id="reps" ng-model="doerate.reps">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -98,24 +98,24 @@
 
       </select>
     </div>
-    <div>
+    <div class="spacing">
         <!-- I will have change this to a time thing TODO -->
-        <label for="time">Time</label>
-        <input type="text" name="time" id="time" ng-model="doerate.time">
+        <label for="time">Time:</label>
+        <input class="dropdown whiteBlock" type="text" name="time" id="time" ng-model="doerate.time">
     </div>
-    <div>
+    <div class="spacing">
         <!-- I will have change this to a time thing TODO -->
-        <label for="restTime">Rest Time</label>
-        <input type="text" name="restTime" id="restTime" ng-model="doerate.restTime">
+        <label for="restTime">Rest Time:</label>
+        <input class="dropdown whiteBlock" type="text" name="restTime" id="restTime" ng-model="doerate.restTime">
     </div>
-    <div>
+    <div class="spacing">
         <p class="titleSlide">
           Quality:
         </p>
         <input class="slide-label" name="quality" id="quality" type="number" ng-model="priceSl"  />
         <rzslider rz-slider-model="priceSl"></rzslider>
     </div>
-    <div>
+    <div class="spacing">
         <p class="titleSlide">
           Pain:
         </p>

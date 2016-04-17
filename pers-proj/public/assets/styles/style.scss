@@ -326,6 +326,71 @@ $body-bg: transparent;
 }
 
 .subdo{
-  margin-left:42%;
+  margin-left:30%;
   margin-right:45%;
+}
+
+
+.dropdown{
+  box-shadow: none !important;
+  border: none !important;
+  background-color: rgba(255,255,255,.75) !important;
+}
+
+.doExBox{
+  label{
+    color:#5DC8CD;
+    font-size: 2em;
+  }
+  .exl{
+    color:#5DC8CD;
+    font-size:2em;
+  }
+  input{
+    color:#209fa5;
+    font-size:2em;
+  }
+  .spacing{
+    margin-top: 5px;
+  }
+  .titleSlide{
+    color:#5DC8CD;
+    font-size:2em;
+  }
+}
+
+// .whiteBlock{
+//   background-color: rgba(255,255,255,.75) !important;
+// }
+
+
+//create ex going back to
+
+.boxCreateEx{
+  width:50%;
+  opacity:1;
+  background-color: rgba(105, 105, 105,.74) !important;
+  label{
+    color:#5DC8CD;
+
+  }
+  input{
+    color:#209fa5;
+    font-size: 1.05em;
+
+  }
+  textarea{
+    color:#209fa5;
+    font-size: .75em;
+    height:20px;
+    margin-bottom:0px;
+
+  }
+  .clicker{
+    color:#5DC8CD !important;
+    margin-right: 35px;
+  }
+  .line{
+    margin-bottom: 25px;
+  }
 }

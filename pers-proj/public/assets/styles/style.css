@@ -258,7 +258,47 @@ body {
   width: 100%; }
 
 .subdo {
-  margin-left: 42%;
+  margin-left: 30%;
   margin-right: 45%; }
+
+.dropdown {
+  box-shadow: none !important;
+  border: none !important;
+  background-color: rgba(255, 255, 255, 0.75) !important; }
+
+.doExBox label {
+  color: #5DC8CD;
+  font-size: 2em; }
+.doExBox .exl {
+  color: #5DC8CD;
+  font-size: 2em; }
+.doExBox input {
+  color: #209fa5;
+  font-size: 2em; }
+.doExBox .spacing {
+  margin-top: 5px; }
+.doExBox .titleSlide {
+  color: #5DC8CD;
+  font-size: 2em; }
+
+.boxCreateEx {
+  width: 50%;
+  opacity: 1;
+  background-color: rgba(105, 105, 105, 0.74) !important; }
+  .boxCreateEx label {
+    color: #5DC8CD; }
+  .boxCreateEx input {
+    color: #209fa5;
+    font-size: 1.05em; }
+  .boxCreateEx textarea {
+    color: #209fa5;
+    font-size: .75em;
+    height: 20px;
+    margin-bottom: 0px; }
+  .boxCreateEx .clicker {
+    color: #5DC8CD !important;
+    margin-right: 35px; }
+  .boxCreateEx .line {
+    margin-bottom: 25px; }
 
 /*# sourceMappingURL=style.css.map */

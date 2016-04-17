@@ -1,6 +1,6 @@
 <div class="boxCreateEx">
 <form name="createexform" ng-submit="submitForm()">
-    <div>
+    <div class="line">
         <label class="darkText" for="name">Name of Exercise:</label>
         <input class="submitBtn darkText" type="text" name="name" id="name" ng-model="allerate.name">
     </div>
@@ -9,11 +9,11 @@
       <input class="userCreate" type="text" name="user" id="user" value="{{user.user.userName}}" ng-model="allerate.user" >
     </div>
 
-    <div>
+    <div class="line">
         <label class="darkText" for="description">Description Of Exercise:</label>
         <textarea class="submitBtn" type="description" name="description" id="description" ng-model="allerate.description"></textarea>
     </div>
-    <div>
+    <div class="line">
       <label for="bodyRegion">Body Part</label>
       <select class="submitBtn" for="bodyRegion" type="bodyRegion" name="bodyRegion" id="bodyRegion" ng-model="allerate.bodyRegion">
           <option value="neck">Neck</option>
@@ -39,7 +39,7 @@
           <option value="calves">Calves</option>
       </select>
     </div>
-    <div>
+    <div class="line">
       <label for="deviceType">Equipment Type</label>
       <select class="submitBtn" or="deviceType" type="deviceType" name="deviceType" id="deviceType"ng-model="allerate.deviceType">
               <option value="barbell">Barbell</option>
@@ -51,10 +51,10 @@
               <option value="pilatesMachine">Pilates Machine</option>
         </select>
     </div>
-    <div>
-      <input class="submitBtn litbut" type="checkbox" name="time" value="true" id="time" ng-model="allerate.time"/> Time
-      <input class="submitBtn litbut" type="checkbox" name="reps" value="true" id="reps" ng-model="allerate.reps"/> Reps
-      <input class="submitBtn litbut" type="checkbox" name="weight" value="true" id="weight" ng-model="allerate.weight"/> Weight
+    <div class="line">
+      <input class="submitBtn litbut" type="checkbox" name="time" value="true" id="time" ng-model="allerate.time"/> <span class="clicker">Time</span>
+      <input class="submitBtn litbut" type="checkbox" name="reps" value="true" id="reps" ng-model="allerate.reps"/> <span class="clicker">Reps</span>
+      <input class="submitBtn litbut" type="checkbox" name="weight" value="true" id="weight" ng-model="allerate.weight"/><span class="clicker">Weight</span>
 
     </div>
     <input class="submitBtn subbtn" type="submit" value="make exercise"/>
