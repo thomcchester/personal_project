@@ -13,8 +13,40 @@ $primary-color: #333;
 //     transition: $duration;
 // }
 
-html {
+.backgrounder{
+    width:100%;
+    height:100%;
     background: url(/extras/training.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.backgrounderUser{
+    width:100%;
+    height:100%;
+    background: url(/extras/gym-man.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.backgrounderIndex{
+    width:100%;
+    height:100%;
+    background: url(/extras/gym-woman.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.backgrounderFailure{
+    width:100%;
+    height:100%;
+    background: url(/extras/chalk.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -392,5 +424,13 @@ $body-bg: transparent;
   }
   .line{
     margin-bottom: 25px;
+  }
+}
+
+.sideItems a{
+  text-decoration:none !important;
+  li{
+    margin-top: 25px;
+    font-size: .5em;
   }
 }
